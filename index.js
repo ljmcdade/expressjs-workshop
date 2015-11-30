@@ -4,7 +4,9 @@ var app = express();
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-
+ app.get('/hello', function (request, response){
+   response.send('<h1>Yo, whassup?</h1>');
+ });
 
 
 
