@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
+var parser = require('body-parser');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.use(parser.json());
+
+
+app.post('/entry', function (req, res) {
+  console.log(req.body);
+  res.end();
 });
 
 
